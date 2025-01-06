@@ -1,0 +1,6 @@
+__pycache__/
+.idea/
+.coverage
+.venv/
+charcountpy.egg-info/
+
