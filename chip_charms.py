@@ -1,7 +1,7 @@
 import random
 import time
 from datetime import datetime
-import redis
+# import redis
 
 import requests
 import winsound
@@ -18,16 +18,16 @@ CHAT_ID = 771138406
 TELEGRAM_API_URL = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
 print(TELEGRAM_API_URL)
 
-r = redis.Redis(host='localhost', port = 6379, decode_responses=True)
+# r = redis.Redis(host='localhost', port = 6379, decode_responses=True)
 
-def add_skin_price_to_memory(skin_name):
-    """
-    Сохраняет найденный скин в Redis с TTL (время жизни) в 3 часа.
-    """
-    ttl = 3 * 60 * 60  # 3 часа в секундах
-    current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    r.set(skin_name, current_time, ex=ttl)
-    print(f"Скин {skin_name} добавлен в память (будет удалён через 3 часа).")
+# def add_skin_price_to_memory(skin_name):
+#     """
+#     Сохраняет найденный скин в Redis с TTL (время жизни) в 3 часа.
+#     """
+#     ttl = 3 * 60 * 60  # 3 часа в секундах
+#     current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+#     r.set(skin_name, current_time, ex=ttl)
+#     print(f"Скин {skin_name} добавлен в память (будет удалён через 3 часа).")
 
 def send_telegram_message(message):
     """
