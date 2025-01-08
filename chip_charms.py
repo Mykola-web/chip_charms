@@ -4,7 +4,7 @@ from datetime import datetime
 # import redis
 
 import requests
-import winsound
+# import winsound
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
