@@ -82,10 +82,10 @@ def search_discounts(url):
                     # print('sent2')
             return charms
         except Exception as e:
-            print(e)
+            pass
 
 charms = []
-max_prise = 0.5
+max_prise = 1
 urls=[f'https://market.csgo.com/en/?priceMax={max_prise}&stickers=32119373246',
       f'https://market.csgo.com/en/?priceMax={max_prise}&stickers=31755221379',
       f'https://market.csgo.com/en/?priceMax={max_prise}&stickers=31932543410',
@@ -128,7 +128,7 @@ while True:
             random_sleep_time = random.uniform(2, 4)
             time.sleep(random_sleep_time)
         except Exception as e:
-            print(e)
+            pass
     random_sleep_time_2 = random.uniform(10, 15)
     time.sleep(random_sleep_time_2)
     print('====================================================================')
